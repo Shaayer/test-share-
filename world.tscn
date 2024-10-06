@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkarudb0yh2mw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5qju"]
+size = Vector2(1090, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fr23g"]
+
+[node name="World" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(587, 586)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_e5qju")
+
+[node name="Box" type="RigidBody2D" parent="."]
+position = Vector2(420, 168)
+rotation = 0.57421
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
+shape = SubResource("RectangleShape2D_fr23g")
